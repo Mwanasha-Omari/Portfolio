@@ -2,12 +2,13 @@ import React from 'react';
 
 const Skills = () => {  
   const skills = [  
-    { name: 'Next.js', percentage: 80 },  
-    { name: 'React.js', percentage: 90 },  
+    { name: 'HTML/CSS', percentage: 98 }, 
+    { name: 'React.js', percentage: 90 },    
+    { name: 'Next.js', percentage: 80 }, 
     { name: 'Python', percentage: 60 },  
     { name: 'Kotlin', percentage: 50 },  
     { name: 'Data Science', percentage: 75 },  
-    { name: 'HTML/CSS', percentage: 98 },  
+
   ];  
 
   return (  

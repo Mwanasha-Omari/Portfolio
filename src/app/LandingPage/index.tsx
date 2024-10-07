@@ -11,11 +11,16 @@ const LandingPage = () => {
   ];
 
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 2000);
+      setFade(false);
+      setTimeout(() => {
+        setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        setFade(true);
+      }, 500); 
+    }, 3000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -28,20 +33,14 @@ const LandingPage = () => {
             Hello, my name is Mwanasha Omari
           </h1>
           <h2 className="text-3xl sm:text-4xl md:text-5xl leading-loose">
-            <span className='text-brown transition-all duration-500 ease-in-out'>
+            <span className={`text-brown transition-opacity duration-500 ease-in-out ${fade ? 'opacity-100' : 'opacity-0'}`}>
               {roles[currentRoleIndex]}
             </span>
           </h2>
         </div>
         <div className="md:w-1/2 flex justify-center md:justify-end">
           <div className="relative group">
-            <Image 
-              src='/Images/OMARI.png' 
-              alt="Mwanasha Omari"
-              width={240}
-              height={240}
-              className='rounded-full object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110 shadow-lg group-hover:shadow-xl'
-            />
+            <Image src='/Images/OMARI.png' alt="Mwanasha Omari" width={240} height={240} className='rounded-full object-cover transition-transform duration-500 ease-in-out transform group-hover:scale-110 shadow-lg group-hover:shadow-xl'/>
             <div className="absolute inset-0 rounded-full border-4 border-brown opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"></div>
             <div className="absolute inset-0 rounded-full bg-white opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-50"></div>
           </div>
