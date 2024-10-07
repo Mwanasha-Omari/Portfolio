@@ -6,7 +6,6 @@ import { FaLocationDot } from "react-icons/fa6";
 
 const FooterContent = () => {
   return (
-
 <div id="contact"> 
     <footer className="bg-brown text-white py-8 md:py-12 font-poppins">
       <div className="container mx-auto px-4">
@@ -15,7 +14,7 @@ const FooterContent = () => {
             <h2 className="font-semibold mb-4 text-white text-xl">Get In Touch</h2>
             <div className="flex items-center mb-4"> 
               <FaPhone className="mr-4 w-6 h-6 md:w-7 md:h-7" />
-              <p className="text-base md:text-lg">+254 792 804 646</p>
+              <p className="text-base md:text-lg">+254 768 881 038</p>
             </div>               
             <div className="flex items-center mb-4"> 
               <MdEmail className="mr-4 w-6 h-6 md:w-7 md:h-7" />

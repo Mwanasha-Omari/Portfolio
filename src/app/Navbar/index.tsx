@@ -44,7 +44,7 @@ const Navbar = () => {
           </button>
           <div className="flex-grow flex flex-col items-center justify-center"> 
             <MobileNavLink href="#home" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
-            <MobileNavLink href="#about" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
+            <MobileNavLink href="#about" onClick={() => setIsMenuOpen(false)}>About</MobileNavLink>
             <MobileNavLink href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</MobileNavLink>
             <MobileNavLink href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</MobileNavLink>
             <MobileNavLink href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</MobileNavLink>
