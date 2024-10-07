@@ -42,7 +42,7 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
-          <div className="flex-grow flex flex-col items-center justify-center"> {/* Center items vertically */}
+          <div className="flex-grow flex flex-col items-center justify-center"> 
             <MobileNavLink href="#home" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
             <MobileNavLink href="#about" onClick={() => setIsMenuOpen(false)}>Home</MobileNavLink>
             <MobileNavLink href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</MobileNavLink>
