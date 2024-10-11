@@ -15,9 +15,9 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 h-16 text-base text-black py-4 px-6 w-full flex font-sans items-center z-50 backdrop-blur-md bg-white/50 sm:px-8 md:px-16 lg:px-32">
       <div className="flex items-center w-full justify-between">
         <div className="flex-shrink-0">
-        <img src='/logo.png' alt='logo' className='w-[70px] object-cover'/>  
-      </div>
-        <div className="hidden md:flex gap-8 lg:gap-40 mt-2 text-2xl mr-8 lg:mr-40">
+          <h2 className='text-black text-2xl font-bold'>Mwanasha</h2>
+        </div>
+        <div className="hidden md:flex gap-8 lg:gap-40 mt-2 text-xl sm:text-lg md:text-xl lg:text-2xl mr-8 lg:mr-40">
           <NavLink href="#home" onClick={() => { handleScroll("#home"); setIsMenuOpen(false); }}>Home</NavLink>
           <NavLink href="#about" onClick={() => { handleScroll("#about"); setIsMenuOpen(false); }}>About</NavLink>
           <NavLink href="#projects" onClick={() => { handleScroll("#projects"); setIsMenuOpen(false); }}>Projects</NavLink>
@@ -73,7 +73,7 @@ function NavLink({ href, children, onClick }: NavLinkProps) {
   return (
     <a 
       href={href} 
-      className="text-primary-amber hover:text-brown font-bold"
+      className="text-primary-amber hover:text-blue font-bold"
       onClick={onClick}
     >
       {children}
@@ -92,7 +92,7 @@ function MobileNavLink({ href, children, onClick }: MobileNavLinkProps) {
     <a 
       href={href} 
       onClick={onClick} 
-      className="block px-3 py-4 text-2xl font-bold text-primary-amber hover:text-brown"
+      className="block px-3 py-4 text-xl font-bold text-primary-amber hover:text-blue"
     >
       {children}
     </a>

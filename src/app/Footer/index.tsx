@@ -1,49 +1,140 @@
-"use client";
-import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa";
-import { FaLocationDot } from "react-icons/fa6";
+"use client";  
+import { useState } from 'react'  
+import { motion } from 'framer-motion'  
+import { FaPhoneAlt } from "react-icons/fa";  
+import { IoLocation } from "react-icons/io5";  
+import { MdEmail } from "react-icons/md";  
 
+import emailjs from 'emailjs-com'  
 
-const FooterContent = () => {
-  return (
-<div id="contact"> 
-    <footer className="bg-brown text-white py-8 md:py-12 font-poppins">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h2 className="font-semibold mb-4 text-white text-xl">Get In Touch</h2>
-            <div className="flex items-center mb-4"> 
-              <FaPhone className="mr-4 w-6 h-6 md:w-7 md:h-7" />
-              <p className="text-base md:text-lg">+254 768 881 038</p>
-            </div>               
-            <div className="flex items-center mb-4"> 
-              <MdEmail className="mr-4 w-6 h-6 md:w-7 md:h-7" />
-              <p className="text-base md:text-lg">alimwanashaomari@gmail.com</p>
-            </div>
-          </div>
-          
-          <div className="text-left md:text-center">
-            <h2 className="font-semibold mb-4 text-white text-xl">About Us</h2>
-            <p className="mb-4 text-base md:text-lg">Mission</p> 
-            <p className="mb-4 text-base md:text-lg">Vision</p> 
-          </div>
-          
-          <div className="text-left md:text-right">
-            <h2 className="font-semibold mb-4 text-white text-xl">Location</h2>
-            <div className="flex items-center mb-4 justify-start md:justify-end"> 
-              <FaLocationDot className="mr-4 w-6 h-6 md:w-7 md:h-7" />
-              <p className="text-base md:text-lg">Karen Hardy 616 Korongo Road</p>
-            </div>
-          </div>
+export default function Contact() {  
+  const [formData, setFormData] = useState({  
+    name: '',  
+    email: '',  
+    message: ''  
+  })  
+  const [status, setStatus] = useState('')  
+
+  const handleChange = (e: { target: { name: string; value: string; } }) => {  
+    const { name, value } = e.target  
+    setFormData(prevState => ({ ...prevState, [name]: value }))  
+  }  
+
+  const handleSubmit = async (e: { preventDefault: () => void }) => {  
+    e.preventDefault()  
+    setStatus('Sending...')  
+
+    const serviceId = 'service_40hs5i9'  
+    const templateId = 'template_t0hlmu8'  
+    const userId = 'fFhmtiVQ0pdQQ9F1B'  
+
+    const templateParams = {  
+      name: formData.name,  
+      email: formData.email,  
+      message: formData.message  
+    }  
+
+    emailjs.send(serviceId, templateId, templateParams, userId)  
+      .then(() => {  
+        setStatus('Message sent successfully!')  
+        setFormData({ name: '', email: '', message: '' })  
+      })  
+      .catch(() => {  
+        setStatus('Failed to send message. Please try again later.')  
+      })  
+  }  
+
+  return (  
+    <>  
+      <section id="contact" className="mt-80 py-20 bg-blue-950 dark:bg-blue">  
+        <div className="container mx-auto px-4">  
+          <h2 className="text-3xl font-bold text-center mb-8 text-white">Get in Touch</h2>  
+          <div className="flex flex-wrap -mx-4">  
+            <div className="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">  
+              <motion.div  
+                className="bg-blue-500 rounded-lg shadow-xl p-6 border-2 border-blue-400 text-white"  
+                initial={{ opacity: 0, x: -50 }}  
+                animate={{ opacity: 1, x: 0 }}  
+                transition={{ duration: 0.5 }}>  
+                <h3 className="text-2xl font-semibold mb-4">Contact Information</h3>  
+                <div className="flex items-center mb-4">  
+                  <MdEmail className="h-6 w-6 mr-2" />  
+                  <p>alimwanashaomari@gmail.com</p>  
+                </div>  
+                <div className="flex items-center mb-4">  
+                  <FaPhoneAlt className="h-6 w-6 mr-2" />  
+                  <p>+254 768 881 038</p>  
+                </div>  
+                <div className="flex items-center">  
+                  <IoLocation className="h-6 w-6 mr-2" />  
+                  <p>Nairobi Kenya, Karen, 616</p>  
+                </div>  
+              </motion.div>  
+            </div>  
+            <div className="w-full lg:w-1/2 px-4">  
+              <motion.form  
+                className="bg-blue-400 rounded-lg shadow-xl p-6 border-2 border-blue-400 text-white"  
+                initial={{ opacity: 0, x: 50 }}  
+                animate={{ opacity: 1, x: 0 }}  
+                transition={{ duration: 0.5 }}  
+                onSubmit={handleSubmit}>  
+                <div className="mb-4">  
+                  <label htmlFor="name" className="block font-bold mb-2 text-white">Name</label>  
+                  <input  
+                    type="text"  
+                    id="name"  
+                    name="name"  
+                    value={formData.name}  
+                    onChange={handleChange}  
+                    className="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white text-black"  
+                    required  
+                  />  
+                </div>  
+                <div className="mb-4">  
+                  <label htmlFor="email" className="block font-bold mb-2 text-white">Email</label>  
+                  <input  
+                    type="email"  
+                    id="email"  
+                    name="email"  
+                    value={formData.email}  
+                    onChange={handleChange}  
+                    className="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white text-black"  
+                    required  
+                  />  
+                </div>  
+                <div className="mb-4">  
+                  <label htmlFor="message" className="block font-bold mb-2 text-white">Message</label>  
+                  <textarea  
+                    id="message"  
+                    name="message"  
+                    rows={4}  
+                    value={formData.message}  
+                    onChange={handleChange}  
+                    className="w-full px-3 py-2 border border-blue-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white text-black"  
+                    required  
+                  ></textarea>  
+                </div>  
+                <button  
+                  type="submit"  
+                  className="w-full bg-blue-950 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue focus:ring-opacity-50" >  
+                  Send Message  
+                </button>  
+                {status && (  
+                  <p className="mt-4 text-center text-green-400">  
+                    {status}  
+                  </p>  
+                )}  
+              </motion.form>  
+            </div>  
+          </div>  
+        </div>  
+      </section>  
+
+      <footer className="bg-gray-900 text-white py-4"> 
+        <div className="container mx-auto text-center">
+          <p>&copy; 2024 Mwanasha. All rights reserved.</p>
         </div>
-      </div>
-      <hr className="my-6 border-gray-300" /> 
-      <div className="text-center px-4">
-        <p className="text-sm md:text-base">© Copyright @2024 Mwanasha Omari. All rights reserved.</p>
-      </div>
-    </footer>
-    </div>
-  );
+      </footer>  
+    </>  
+  );  
 }
-
-export default FooterContent;
