@@ -4,6 +4,12 @@ import { motion } from 'framer-motion'
 import { FaPhoneAlt } from "react-icons/fa";  
 import { IoLocation } from "react-icons/io5";  
 import { MdEmail } from "react-icons/md";  
+import { FaBehance } from "react-icons/fa6";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
+
+
 
 import emailjs from 'emailjs-com'  
 
@@ -68,7 +74,19 @@ export default function Contact() {
                 <div className="flex items-center">  
                   <IoLocation className="h-6 w-6 mr-2" />  
                   <p>Nairobi Kenya, Karen, 616</p>  
-                </div>  
+                </div> 
+                <div className="flex items-center mt-4">
+                <FaBehance className="h-6 w-6 mr-2"/>
+                   <p><a href='https://www.behance.net/alimwanasha'>Behance</a></p>
+                  </div> 
+                  <div className="flex items-center mt-4">
+                <FaLinkedinIn className="h-6 w-6 mr-2"/>
+                   <p><a href='https://www.linkedin.com/in/mwanasha-omari-6b48532b4/'>LinkedIn</a></p>
+                  </div> 
+                  <div className="flex items-center mt-4">
+                <FaXTwitter className="h-6 w-6 mr-2"/>
+                   <p><a href='https://x.com/OmariMwanasha'>Twitter</a></p>
+                  </div> 
               </motion.div>  
             </div>  
             <div className="w-full lg:w-1/2 px-4">  
@@ -116,7 +134,7 @@ export default function Contact() {
                 </div>  
                 <button  
                   type="submit"  
-                  className="w-full bg-blue-950 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue focus:ring-opacity-50" >  
+                  className="w-full bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-blue focus:ring-opacity-50" >  
                   Send Message  
                 </button>  
                 {status && (  
