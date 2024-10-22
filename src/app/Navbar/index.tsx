@@ -14,10 +14,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 h-16 text-base text-black py-4 px-6 w-full flex font-sans items-center z-50 backdrop-blur-md bg-white/50 sm:px-8 md:px-16 lg:px-32">
       <div className="flex items-center w-full justify-between">
-        <div className="flex-shrink-0 mr-8">
-          <h2 className='text-black text-lg font-bold'>Mwanasha</h2>
+        <div className="flex-shrink-0 ml-24">
+          <h2 className='text-black text-3xl font-bold'>Mwanasha</h2>
         </div>
-        <div className="hidden md:flex gap-8 lg:gap-40 mt-2 text-lg sm:text-base md:text-lg lg:text-xl mr-8 lg:mr-40 ml-auto">
+        <div className="hidden md:flex gap-4 mt-2 text-lg sm:text-base md:text-lg lg:text-xl mr-8 lg:mr-40 ml-auto"> 
           <NavLink href="#home" onClick={() => { handleScroll("#home"); setIsMenuOpen(false); }}>Home</NavLink>
           <NavLink href="#about" onClick={() => { handleScroll("#about"); setIsMenuOpen(false); }}>About</NavLink>
           <NavLink href="#projects" onClick={() => { handleScroll("#projects"); setIsMenuOpen(false); }}>Projects</NavLink>
@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="text-black focus:outline-none backdrop-blur-md bg-white/50 p-2 rounded">
+            className="text-black focus:outline-none backdrop-blur-lg bg-white/70 p-2 rounded">
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path 
                 strokeLinecap="round" 
@@ -70,7 +70,7 @@ function NavLink({ href, children, onClick }: NavLinkProps) {
   return (
     <a 
       href={href} 
-      className="text-primary-amber hover:text-blue-200 font-bold text-lg" 
+      className="ml-4 text-primary-amber hover:text-blue-200 hover:font-bold text-lg"  
       onClick={onClick}>
       {children}
     </a>
@@ -88,7 +88,7 @@ function MobileNavLink({ href, children, onClick }: MobileNavLinkProps) {
     <a 
       href={href} 
       onClick={onClick} 
-      className="block px-3 py-4 text-lg font-bold text-primary-amber hover:text-blue-200"> 
+      className="block px-3 py-4 text-lg text-primary-amber hover:text-blue-200 hover:font-bold"> 
       {children}
     </a>
   );

@@ -75,15 +75,15 @@ export default function Contact() {
                   <IoLocation className="h-6 w-6 mr-2" />  
                   <p>Nairobi Kenya, Karen, 616</p>  
                 </div> 
-                <div className="flex items-center mt-4">
+                <div className="flex items-center mt-4  hover:text-slate-300 hover:font-bold">
                 <FaBehance className="h-6 w-6 mr-2"/>
                    <p><a href='https://www.behance.net/alimwanasha'>Behance</a></p>
                   </div> 
-                  <div className="flex items-center mt-4">
+                  <div className="flex items-center mt-4  hover:text-slate-300 hover:font-bold">
                 <FaLinkedinIn className="h-6 w-6 mr-2"/>
                    <p><a href='https://www.linkedin.com/in/mwanasha-omari-6b48532b4/'>LinkedIn</a></p>
                   </div> 
-                  <div className="flex items-center mt-4">
+                  <div className="flex items-center mt-4  hover:text-slate-300 hover:font-bold">
                 <FaXTwitter className="h-6 w-6 mr-2"/>
                    <p><a href='https://x.com/OmariMwanasha'>Twitter</a></p>
                   </div> 

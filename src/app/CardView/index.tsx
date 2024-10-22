@@ -23,14 +23,14 @@ const CardSection = () => {
       link: '/empowering-rural-teachers',
     },
     {
-      image: 'firstproject.png',
+      image: '/kipepeo-logo.png',
       title: 'Recipe Nutrition Calculator',
-      description: 'An application that calculates the nutritional information of a recipe.',
-      link: 'https://nutrition-analyzer.vercel.app/analyzer.html',
+      description: 'Elegance meets innovation. Bespoke fashion and intuitive UI blend artistry with seamless experiences—captivating and unique..',
+      link: 'https://www.figma.com/design/Tv4qzYBLEiv6OrRDi0IXnL/Haute-Couture-Fashion-business?node-id=0-1&node-type=canvas&t=ywC4svZ7WYg3mLvk-0',
     },
     {
-      image: '/Images/secondproject.png',
-      title: 'BMI Calculator',
+      image: '/Images/Akira oil Logo.png',
+      title: 'Akira Oil',
       description: 'Body Mass Index calculator that calculates and categorizes BMI based on user input.',
       link: 'https://bmi-calculator-two-gray.vercel.app/',
     },
@@ -44,7 +44,7 @@ const CardSection = () => {
 
   const pageTitles = [
     ["Recipe Nutrition Calculator", "BMI Calculator", "Empowering Rural Teachers"],
-    ["Design Project 1", "Design Project 2", "Design Project 3"],
+    ["Kipepeo Haute Couture Fashion business", "Akira Oil", "Design Project 3"],
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
