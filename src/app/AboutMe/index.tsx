@@ -19,18 +19,15 @@ const AboutMe = () => {
           </div>  
         </div>  
         <div className="w-full md:w-1/2 space-y-8 md:ml-4 flex flex-col justify-center items-center md:items-start">  
-        <p className="mb-4 text-2xl">
-  Passionate about telehealth, Mwanasha is dedicated  <br/>
-  to using innovation to  enhance patient outcomes.  <br/>
-  As a Software Developer, she focuses  on new       <br/>
-  technologies like telemedicine and electronic  <br/>
-  health records to improve  access to care.Her goal  <br/>
-  is to push the boundaries of health tech,aiming to  <br/>
-  quality of life and drive positive improve health<br/>
-  outcomes globally.
-</p>
-
-
+          <p className="mb-4 text-2xl">
+            Passionate about telehealth, Mwanasha is dedicated  <br/>
+            to using innovation to enhance patient outcomes .As  <br/>
+            a Software Developer,she focuses on new technologies<br/>
+            like telemedicine and electronic health records to <br/>
+            improve access to care. Her goal is to push the <br/>
+            boundaries of health tech, aiming to improve quality<br/>
+            of life and drive positive health outcomes globally.
+          </p>
         </div>  
       </div>  
     </div>  

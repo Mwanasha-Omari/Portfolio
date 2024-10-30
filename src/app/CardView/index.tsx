@@ -5,7 +5,7 @@ import { GrFormNext, GrFormPrevious } from 'react-icons/gr';
 const CardSection = () => {
   const cards = [
     {
-      image: 'firstproject.png',
+      image: '/Images/firstproject.png',
       title: 'Recipe Nutrition Calculator',
       description: 'An application that calculates the nutritional information of a recipe.',
       link: 'https://nutrition-analyzer.vercel.app/analyzer.html',
@@ -18,33 +18,33 @@ const CardSection = () => {
     },
     {
       image: '/Images/casestudy.png',
-      title: 'Empowering Rural Teachers',
+      title: 'Edukeri',
       description: 'A platform for uninterrupted delivery of quality education for teachers in rural areas providing them with essential digital skills.',
       link: '/empowering-rural-teachers',
     },
     {
-      image: '/kipepeo-logo.png',
+      image: '/Images/kipepeo-logo.png',
       title: 'Recipe Nutrition Calculator',
-      description: 'Elegance meets innovation. Bespoke fashion and intuitive UI blend artistry with seamless experiences—captivating and unique..',
+      description: 'Elegance meets innovation. Bespoke fashion and intuitive UI blend artistry with seamless experiences—captivating and unique.',
       link: 'https://www.figma.com/design/Tv4qzYBLEiv6OrRDi0IXnL/Haute-Couture-Fashion-business?node-id=0-1&node-type=canvas&t=ywC4svZ7WYg3mLvk-0',
     },
     {
       image: '/Images/Akira oil Logo.png',
       title: 'Akira Oil',
-      description: 'Body Mass Index calculator that calculates and categorizes BMI based on user input.',
-      link: 'https://bmi-calculator-two-gray.vercel.app/',
+      description: 'LPG Ordering Website.',
+      link: 'https://www.figma.com/design/b7fIQmaiUzRVS1CpELbwyo/Akiraoil-UI?node-id=108-17&node-type=canvas&t=zEJlxVlU5MfTeiwV-0',
     },
     {
-      image: '/Images/casestudy.png',
+      image: '/Images/album cover.png',
       title: 'Empowering Rural Teachers',
-      description: 'A platform for uninterrupted delivery of quality education for teachers in rural areas providing them with essential digital skills.',
-      link: '/empowering-rural-teachers',
+      description: 'This music platform features a modern, minimalist design in purple and lavender. Organized sections for artists and track listings create a user-friendly experience.',
+      link: 'https://www.figma.com/design/LQSHfS7RH10uWQYRqvBLxB/Album-Assignment%2FDesign?node-id=24-6&node-type=canvas&t=zEJlxVlU5MfTeiwV-0',
     },
   ];
 
   const pageTitles = [
-    ["Recipe Nutrition Calculator", "BMI Calculator", "Empowering Rural Teachers"],
-    ["Kipepeo Haute Couture Fashion business", "Akira Oil", "Design Project 3"],
+    ["Recipe Nutrition Calculator", "BMI Calculator", "Edukeri"],
+    ["Kipepeo Haute Couture Fashion business", "Akira Oil", "Album Design"],
   ];
 
   const [currentPage, setCurrentPage] = useState(0);
