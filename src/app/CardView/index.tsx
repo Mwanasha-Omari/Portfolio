@@ -64,8 +64,8 @@ const CardSection = () => {
   const displayedCards = cards.slice(currentPage * 3, currentPage * 3 + 3);
 
   return (
-    <div className="mt-[200px] px-4 sm:px-8 md:px-16 lg:px-32 relative" id="projects">
-      <h1 className="text-center text-5xl mb-6">
+    <div className=" sm:px-8 md:px-16 lg:px-32 relative" id="projects">
+      <h1 className="text-center text-5xl mt-48">
         {currentPage === 0 ? "Projects" : "Design Projects"}
       </h1>
       <div onClick={handlePrevious} className={`cursor-pointer text-3xl text-blue-500 hover:text-blue-700 ${currentPage === 0 ? 'opacity-50 pointer-events-none' : ''} absolute left-4 top-1/2 transform -translate-y-1/2 z-10`}>
@@ -82,8 +82,8 @@ const CardSection = () => {
                 {pageTitles[currentPage][index]}
               </h3>
               <p className="text-gray-600 mb-4">{card.description}</p>
-              <a href={card.link} className="text-blue-500 hover:text-blue-700">
-                Learn More
+              <a href={card.link} className="text-blue-500 hover:text-blue hover:text-lg">
+                View on github
               </a>
             </div>
           </div>

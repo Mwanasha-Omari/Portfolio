@@ -10,12 +10,11 @@ const Navbar = () => {
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
-
   return (
     <nav className="fixed top-0 left-0 right-0 h-16 text-base text-black py-4 px-6 w-full flex font-sans items-center z-50 backdrop-blur-md bg-white/50 sm:px-8 md:px-16 lg:px-32">
       <div className="flex items-center w-full justify-between">
         <div className="flex-shrink-0 ml-24">
-          <h2 className='text-black text-3xl font-bold'>Mwanasha</h2>
+          <h2 className="text-black text-3xl font-bold font-la-belle-aurore">Mwanasha</h2>
         </div>
         <div className="hidden md:flex gap-4 mt-2 text-lg sm:text-base md:text-lg lg:text-xl mr-8 lg:mr-40 ml-auto"> 
           <NavLink href="#home" onClick={() => { handleScroll("#home"); setIsMenuOpen(false); }}>Home</NavLink>

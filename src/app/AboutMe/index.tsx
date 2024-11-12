@@ -4,8 +4,8 @@ import Image from 'next/image';
 
 const AboutMe = () => {  
   return (  
-    <div id='about' className="py-10">  
-      <h1 className="text-center text-5xl mb-10 text-black">About Me</h1>  
+    <div id='about' className="pt-40">  
+      <h1 className="text-center text-5xl mb-32 text-black">About Me</h1>  
       <div className='flex flex-col md:flex-row justify-center items-center md:space-x-8'>  
         <div className="w-full md:w-1/2 flex justify-center items-center">  
           <div className="relative group w-[400px] h-[400px]">  

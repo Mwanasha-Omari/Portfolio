@@ -12,6 +12,10 @@ const config: Config = {
         'blue': '#1B2344',
         'light-blue':'#E4FOFS',
         'primary color': '#EEEEEE',
+      
+      },
+      fontFamily: {
+        'la-belle-aurore': ['La Belle Aurore', 'sans-serif'],
       },
     },
   },
